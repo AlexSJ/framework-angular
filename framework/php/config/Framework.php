@@ -13,13 +13,17 @@ class Framework {
 	 * Se não for informado um controle na URL o 
 	 * framework buscará o controlle padrão aqui definido
 	 */
-	public static $defaultController = "teste";
+	public static $defaultController = "home";
 
 	/**
 	 * Controle padrão caso não seja encontrado o controle
 	 * que for declarado na URL (404)
 	 */
 	public static $defaultController404 = "erro404";
+
+	public static function layout() {
+		include 'framework/view/layout.php';
+	}
 
 	public static function viewShow($view, $dados)
 	{

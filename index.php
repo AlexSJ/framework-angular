@@ -12,3 +12,5 @@ $acao		= \framework\php\config\Routers::acao();
 $app = '\framework\php\controllers\\' . $controle;
 $app = new $app;
 ($acao ? $app->$acao() : $app->index());
+
+\framework\php\config\Framework::layout();
